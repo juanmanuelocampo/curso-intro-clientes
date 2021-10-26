@@ -1,0 +1,6 @@
+
+--Una vez creado el repositorio y descargado en nuestra PC
+npm run build
+git add -A
+git commit -m "deploying"
+git push
