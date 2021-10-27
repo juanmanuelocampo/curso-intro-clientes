@@ -9,7 +9,7 @@
 }
 
 .TodoItem-p {
-  margin: 24px 0 24px 24px;
+  margin: 24px 0 24px 90px;
   width: calc(100% - 120px);
   font-size: 18px;
   line-height: 24px;
@@ -46,4 +46,10 @@
 }
 .Icon-delete:hover {
   color: red;
+}
+
+.Icon-edit {
+  color: blue;
+  position: absolute;
+  left: 50px;
 }

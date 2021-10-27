@@ -17,8 +17,9 @@ function AppUI() {
     deleteTodo,
     openModal,
     setOpenModal,
+    setOldTodoValue,
   } = React.useContext(TodoContext);
-  
+
   return (
     <React.Fragment>
       <TodoCounter />
@@ -28,7 +29,7 @@ function AppUI() {
         {error && <p>Desespérate, hubo un error...</p>}
         {loading && <p>Estamos cargando, no desesperes...</p>}
         {(!loading && !searchedTodos.length) && <p>¡Crea tu primer TODO!</p>}
-        
+
         {searchedTodos.map(todo => (
           <TodoItem
             key={todo.text}
@@ -36,13 +37,16 @@ function AppUI() {
             completed={todo.completed}
             onComplete={() => completeTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
+            setOpenModal={setOpenModal}
+            setOldTodoValue={setOldTodoValue}
           />
         ))}
       </TodoList>
 
       {!!openModal && (
         <Modal>
-          <TodoForm />
+          <TodoForm
+          />
         </Modal>
       )}
 

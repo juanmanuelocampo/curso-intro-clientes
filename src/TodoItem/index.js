@@ -2,6 +2,11 @@ import React from 'react';
 import './TodoItem.css';
 
 function TodoItem(props) {
+  const onClickButton = () => {
+    props.setOldTodoValue(props.text);
+    props.setOpenModal(prevState => !prevState);
+  };
+
   return (
     <li className="TodoItem">
       <span
@@ -9,6 +14,12 @@ function TodoItem(props) {
         onClick={props.onComplete}
       >
         √
+      </span>
+      <span
+        className={`Icon Icon-edit ${props.completed && 'Icon-check--active'}`}
+        onClick={onClickButton}
+      >
+        Edit
       </span>
       <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
         {props.text}

@@ -10,6 +10,8 @@ function TodoProvider(props) {
     loading,
     error,
   } = useLocalStorage('TODOS_V1', []);
+
+  const [oldTodoValue, setOldTodoValue] = React.useState('');
   const [searchValue, setSearchValue] = React.useState('');
   const [openModal, setOpenModal] = React.useState(false);
 
@@ -37,10 +39,22 @@ function TodoProvider(props) {
     saveTodos(newTodos);
   };
 
+  const updateTodo = (oldText, newText) => {
+    const newTodos = [...todos];
+
+    const objIndex = newTodos.findIndex((obj => obj.text === oldText));
+    if(objIndex < 0){
+      alert('Atención: Se produjo un inconveniente al intentar actualizar el registro. Por o tanto, no podrá realizarse la actualización.')
+      return;
+    }
+    newTodos[objIndex].text = newText;
+    saveTodos(newTodos);
+  };
+
   const completeTodo = (text) => {
     const todoIndex = todos.findIndex(todo => todo.text === text);
     const newTodos = [...todos];
-    newTodos[todoIndex].completed = true;
+    newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
     saveTodos(newTodos);
   };
 
@@ -50,17 +64,20 @@ function TodoProvider(props) {
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   };
-  
+
   return (
     <TodoContext.Provider value={{
       loading,
       error,
       totalTodos,
       completedTodos,
+      oldTodoValue,
+      setOldTodoValue,
       searchValue,
       setSearchValue,
       searchedTodos,
       addTodo,
+      updateTodo,
       completeTodo,
       deleteTodo,
       openModal,
