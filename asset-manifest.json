@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/curso-intro-clientes/static/css/main.ee74b4cc.chunk.css",
-    "main.js": "/curso-intro-clientes/static/js/main.a2aa304c.chunk.js",
-    "main.js.map": "/curso-intro-clientes/static/js/main.a2aa304c.chunk.js.map",
+    "main.css": "/curso-intro-clientes/static/css/main.dcec2e9c.chunk.css",
+    "main.js": "/curso-intro-clientes/static/js/main.dc3ea336.chunk.js",
+    "main.js.map": "/curso-intro-clientes/static/js/main.dc3ea336.chunk.js.map",
     "runtime-main.js": "/curso-intro-clientes/static/js/runtime-main.1558db49.js",
     "runtime-main.js.map": "/curso-intro-clientes/static/js/runtime-main.1558db49.js.map",
-    "static/js/2.92d2c042.chunk.js": "/curso-intro-clientes/static/js/2.92d2c042.chunk.js",
-    "static/js/2.92d2c042.chunk.js.map": "/curso-intro-clientes/static/js/2.92d2c042.chunk.js.map",
+    "static/js/2.be678bae.chunk.js": "/curso-intro-clientes/static/js/2.be678bae.chunk.js",
+    "static/js/2.be678bae.chunk.js.map": "/curso-intro-clientes/static/js/2.be678bae.chunk.js.map",
     "index.html": "/curso-intro-clientes/index.html",
-    "static/css/main.ee74b4cc.chunk.css.map": "/curso-intro-clientes/static/css/main.ee74b4cc.chunk.css.map",
-    "static/js/2.92d2c042.chunk.js.LICENSE.txt": "/curso-intro-clientes/static/js/2.92d2c042.chunk.js.LICENSE.txt"
+    "static/css/main.dcec2e9c.chunk.css.map": "/curso-intro-clientes/static/css/main.dcec2e9c.chunk.css.map",
+    "static/js/2.be678bae.chunk.js.LICENSE.txt": "/curso-intro-clientes/static/js/2.be678bae.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1558db49.js",
-    "static/js/2.92d2c042.chunk.js",
-    "static/css/main.ee74b4cc.chunk.css",
-    "static/js/main.a2aa304c.chunk.js"
+    "static/js/2.be678bae.chunk.js",
+    "static/css/main.dcec2e9c.chunk.css",
+    "static/js/main.dc3ea336.chunk.js"
   ]
 }
